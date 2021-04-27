@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:GasStationProg_1.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="menu">Menu</v:String>
+    <v:String x:Key="ShowItems">Fuel</v:String>
+    <v:String x:Key="ShowShopItems">Show items</v:String>
+    <v:String x:Key="AddItem">Add item</v:String>
+    <v:String x:Key="AddFuel">Add fuel</v:String>
+    <v:String x:Key="Welcome">Administrator, welcome!</v:String>
+    <v:String x:Key="Name">Name: </v:String>
+    <v:String x:Key="Cost">Cost: </v:String>
+    <v:String x:Key="Description">Description: </v:String>
+    <v:String x:Key="ChoosePhoto">Choose photo</v:String>
+    <v:String x:Key="DarkTheme">Dark theme</v:String>
+    <v:String x:Key="LightTheme">Light theme</v:String>
+</ResourceDictionary>
+    

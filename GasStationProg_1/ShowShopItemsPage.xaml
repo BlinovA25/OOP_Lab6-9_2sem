@@ -1,0 +1,53 @@
+﻿<Page x:Class="GasStationProg_1.ShowShopItemsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasStationProg_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ShowShopItemsPage">
+    <Page.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="labelText">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Times new roman"/>
+            <Setter Property="FontSize" Value="40px"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="centeredText">
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontFamily" Value="ArialBlack"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="Gray"></Grid>
+
+        <Grid Grid.Column="1" Background="Lavender">
+            <!--Товары -->
+            <DataGrid x:Name="shopItemsGrid" IsReadOnly="False" AutoGenerateColumns="False" FontSize="17" Margin="5,5,5,5">
+                <DataGrid.Columns>
+                    <!-- Фото -->
+                    <DataGridTemplateColumn Header="Фото" Width="250">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source = "{Binding Path = Photo}"></Image>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn  Header="Название" Binding = "{Binding Path = Name}" Width="150" />
+                    <DataGridTextColumn  Header="Цена" Binding = "{Binding Path = Price}" Width="120" />
+                    <DataGridTextColumn  Header="Описание" Binding = "{Binding Path = Description}" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Page>

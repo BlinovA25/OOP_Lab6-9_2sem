@@ -1,0 +1,27 @@
+﻿<!-- xmlns:local="clr-namespace:GasStationProg_1"-->
+<Page x:Class="GasStationProg_1.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:control ="clr-namespace:GasStationProg_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="MainPage">
+
+    <Page.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="labelText">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Times new roman"/>
+            <Setter Property="FontSize" Value="40px"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="LightGray">
+        <!--
+        <TextBlock Style="{StaticResource labelText}" Text="Главное меню" Margin="349,20,349,630"></TextBlock>
+        -->
+        <TextBlock Style="{StaticResource labelText}" Margin="187,226,172,308" Text="{DynamicResource Welcome}"/>
+    </Grid>
+</Page>

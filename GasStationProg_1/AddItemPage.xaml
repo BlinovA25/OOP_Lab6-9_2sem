@@ -1,0 +1,48 @@
+﻿<Page x:Class="GasStationProg_1.AddItemPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasStationProg_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddItemPage">
+
+    <Page.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="labelText">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Times new roman"/>
+            <Setter Property="FontSize" Value="40px"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="229*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="599*"/>
+            <ColumnDefinition Width="202*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" FontSize="24" Margin="10,10,0,0" TextWrapping="Wrap" Text="{DynamicResource Name}" VerticalAlignment="Top" Height="39" Width="177"/>
+        <TextBox x:Name="Iname" HorizontalAlignment="Left" FontSize="24"  Height="40" Margin="192,9,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+
+        <TextBlock  HorizontalAlignment="Left" FontSize="24" Margin="10,57,0,0" TextWrapping="Wrap" Text="{DynamicResource Cost}" VerticalAlignment="Top" Width="177" Height="32"/>
+        <TextBox x:Name="Icost" HorizontalAlignment="Left" FontSize="24" Height="39" Margin="192,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+
+        <TextBlock  HorizontalAlignment="Left" FontSize="24" Margin="10,103,0,0" TextWrapping="Wrap" Text="{DynamicResource Description}" VerticalAlignment="Top" Width="177" Height="32"/>
+        <TextBox x:Name="Idescr" HorizontalAlignment="Left" FontSize="24" Height="41" Margin="192,94,0,0" TextWrapping="Wrap" Text="Описание отсутствует." VerticalAlignment="Top" Width="598" Grid.ColumnSpan="2"/>
+
+
+
+        <Button x:Name="AddItem" Background="Gray" Content="Add Item" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="182" Height="44" Click="AddItem_Click" Grid.Column="1" Grid.Row="2"/>
+        <Image x:Name="ItemPicture" Source="img.jpg" HorizontalAlignment="Left" Height="300" Width="300" VerticalAlignment="Top"  Margin="10,10,0,0" Grid.Row="1"/>
+        <Button Click="ChoosePhoto_Click" Height="Auto" Content="Выбрать фото"  Margin="10,10,411,21" Grid.Row="2"/>
+
+
+
+    </Grid>
+</Page>
